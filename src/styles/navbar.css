@@ -98,3 +98,45 @@
     display: none;
   }
 }
+
+
+/* Mobile menu (hamburger) */
+.mobile-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 70px;
+  left: -100%;
+  width: 80%;
+  height: calc(100vh - 70px);
+  background: #2c3e50;
+  flex-direction: column;
+  transition: left 0.3s ease;
+  z-index: 99;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+  
+  .nav-menu {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    background: transparent;
+  }
+}

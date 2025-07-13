@@ -104,3 +104,33 @@
     font-size: 1.3rem;
   }
 }
+
+
+
+.home-section {
+  flex-direction: column-reverse; /* Mobile: intro above image */
+}
+
+.home-image {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .home-section {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .home-image {
+    max-width: 350px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .home-image {
+    max-width: 400px;
+  }
+}

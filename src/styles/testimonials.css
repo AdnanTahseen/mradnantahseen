@@ -115,3 +115,31 @@
 .auto-slide-toggle:hover {
   background: #27ae60;
 }
+
+
+.testimonial-card {
+  width: 90vw; /* Mobile: full width */
+  margin: 0 auto;
+}
+
+.slider-buttons {
+  display: none; /* Hide arrows on mobile */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .testimonial-card {
+    width: 70vw;
+  }
+  
+  .slider-buttons {
+    display: flex;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .testimonial-card {
+    width: 50vw;
+  }
+}

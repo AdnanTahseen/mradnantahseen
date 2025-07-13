@@ -66,3 +66,48 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 }
+
+/* Base responsive units */
+:root {
+  --mobile-padding: 1rem;
+  --tablet-padding: 2rem;
+  --desktop-padding: 3rem;
+}
+
+/* Fluid typography */
+html {
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  padding: 0 var(--mobile-padding);
+}
+
+@media (min-width: 768px) { /* Tablet */
+  .container {
+    padding: 0 var(--tablet-padding);
+  }
+}
+
+@media (min-width: 1024px) { /* Desktop */
+  .container {
+    padding: 0 var(--desktop-padding);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Add to App.css */
+button, .nav-links, .project-card {
+  min-height: 48px; /* Minimum touch target size */
+  min-width: 48px;
+}
+
+/* Prevent zoom on form inputs */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px; /* Disables iOS zoom */
+  }
+}

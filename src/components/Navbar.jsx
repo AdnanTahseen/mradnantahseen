@@ -1,15 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import '../styles/navbar.css';
+import { useState } from 'react';
 
 const Navbar = () => {
+const [isMenuOpen, setIsMenuOpen]= useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
+      <button className='mobile-menu-btn' 
+      onClick={()=> setIsMenuOpen(!isMenuOpen)}
+      aria-label='Toggle menu'
+      >
+      {isMenuOpen ? 'X' : '☰'}
+      </button>
         <NavLink to="/" className="navbar-logo">
         <img src='assets/images/profile.jpg' className='profile_logo'></img>
           Mr Solo Developer.
         </NavLink>
-        <ul className="nav-menu">
+        <ul className={`nav-menu ${isMenuOpen ? 'active': ''}`}>
           <li className="nav-item">
             <NavLink to="/" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>Home</NavLink>
           </li>
