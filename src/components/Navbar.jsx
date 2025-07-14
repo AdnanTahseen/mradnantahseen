@@ -15,7 +15,7 @@ const [isMenuOpen, setIsMenuOpen]= useState(false);
       {isMenuOpen ? 'X' : '☰'}
       </button>
         <NavLink to="/" className="navbar-logo">
-        <img src='assets/images/profile.jpg' className='profile_logo'></img>
+        <img src='assets/images/profile.jpg' className='profile_logo' alt='profile'></img>
           Mr Solo Developer.
         </NavLink>
         <ul className={`nav-menu ${isMenuOpen ? 'active': ''}`}>
